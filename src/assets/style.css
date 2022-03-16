@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif !important;
+    letter-spacing: .30px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffc600 !important;
+    border-radius: 8px !important;
+}
+
+.trendingDiv_top{
+    display: inline-block;
+    width: 100%;
+    background-color: #000;
+    padding: 8px 15px;
+    position: absolute;
+    top: 0px;
+    overflow-x: scroll;
+}
+
+.trendingDiv_top::-webkit-scrollbar{
+    height: 4px;
+}
+
+.trendingDiv_top ul{
+    list-style-type: none;
+    display: flex;
+    width: 1200px;
+    justify-content: space-around;
+    color: #ffd700;
+    font-size: 13px;
+}
+
+.token_H1{
+    color: #ffd700;
+    font-size: larger;
+}
+
+.trendingList_table table td,.trendingList_table table th{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.trendingList_table .token_img{
+    width:30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #fff;
+}
+.trendingList_table .name{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.trendingList_table .loader .spinner{
+    font-size: 50px;
+    animation: spin infinite 2s linear;
+}
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+.tokenDetails_left {
+    margin-top: 50px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px #8f80ba69;
+}
+
+.token_Metrics{
+    margin-top: 50px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px #8f80ba69;
+}
+
+.token_statusDetails{
+    margin-top: 50px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px #8f80ba69;
+}
+
+.preSale_timeDiv{
+    margin-top: 50px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px #8f80ba69;
+}
+
+.tokenBrief_Div {
+    display: flex;
+}
+
+.tokenBrief p {
+    /* color: #000000; */
+    margin-bottom: 40px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.token_head {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.tokenImag img{
+    width: 150px;
+}
+
+.tokenBrief {
+    padding: 0px 15px;
+}
+
+.token_head h2{
+    font-size: 25px;
+}
+
+.token_head .green{
+    background: #2fb72f;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin: 0px 15px;
+    color: #fff;
+    /* letter-spacing: 1.5px; */
+    font-size: 12px;
+}
+
+.token_head .blue{
+    font-size: 12px;
+    background: #3dade1;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-right:15px;
+    color: #fff;
+    /* letter-spacing: 1.5px; */
+}
+
+.tokenStatus{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #f5de8c;
+    padding: 7px;
+    color: #b38b00;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.socialIcons.my-2 {
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+}
+
+.custom_tr{
+    border-bottom: 1px solid #8f80ba26;
+}
+
+
+.preSale_warning{
+    background-color: #fffbe6;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #ffe58f;
+    border-radius: 3px;
+}
+
+.preSale_txt{
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.preSale_time{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.preSale_time .day, .hour, .min, .sec{
+  padding: 10px;
+  background-color: #e4daff;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+.preSale_Progress.progress{
+    margin: 10px 0px;
+    border-radius: 25px;
+    height: 12px;
+}
+
+.preSale_progressValue{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.preSale_progressValue span{
+    font-size: 12px;
+}
+
+.preSale_amountTxt{
+    font-size: 14px;
+    letter-spacing: .40px;
+    margin-bottom: 5px;
+}
+
+.preSale_input{
+    width: 100%;
+    border: 1px solid #e4daff;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px;
+}
+
+.preSale_btn{
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    outline: none;
+    border: 1px solid #e4daff;
+    background: #ebe3ff;
+    color: #8972c1;
+    font-size: 14px;
+}
+
+/* ============================================= old Token.tsx CSS End ======================================== */
+
+.trendingList_Div{
+    margin-top: 50px;
+    background: #000000;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px #ffc600;
+    color: #ffc600;
+}
+
+.trendingList_Div th,.trendingList_Div td{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.tokenName_Div{
+    display: flex;
+    align-items: center;
+}
+
+.tokenName_img img{
+    width: 40px;
+    padding: 3px;
+    margin-right: 5px;
+}
+
+.tokenName_text{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width:768px) {
+    .mob-display{
+        display: none !important;
+    }
+    
+}
+
+/* ===================================================== Theme styling ======================================================= */
+
+
+.sc-ehCIER .sc-nVjpj > button {
+    display: none;
+}
+
+nav.sc-dvQbkV {
+    background-color: #000;
+}
+
+.sc-eJwXpk {
+    background-color: #000 !important;
+}
+
+.sc-ehCIER {
+    background-color: #000 !important;
+}
+
+.sc-ehCIER .sc-lbhJmS .sc-jgrIVw {
+    background-color: #292311 !important;
+    color: #ffc600 !important;
+}
+
+.sc-ehCIER .sc-jgrIVw:hover{
+    background-color: #675617 !important;
+    color: #000 !important;
+}
+
+
+button.sc-dkPtyc:nth-child(2) {
+    background-color: #ffd700 !important;
+}

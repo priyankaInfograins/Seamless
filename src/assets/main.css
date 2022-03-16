@@ -1,0 +1,35 @@
+.sc-khQdMy{
+    background-image: url('../assets/images/seamless.svg');
+    background-size: contain;
+    width: 187px;
+}
+
+.sc-khQdMy .mobile-icon{
+  display: none !important;
+}
+
+.sc-khQdMy .desktop-icon{
+  display: none !important;
+}
+
+
+svg {
+  fill: #ffc600 !important;
+}
+
+.sc-dkPtyc[scale="sm"] {
+  background: #ffc600;
+  color: #000;
+}
+
+.sc-hUpaWb {
+  color: #ffc600 !important;
+}
+
+.sc-gsDJrp {
+  color: #ffc600 !important;
+}
+
+a:hover {
+  color: #ffc600 !important;
+}
