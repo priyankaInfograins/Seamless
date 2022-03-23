@@ -79,11 +79,13 @@ const Token: React.FC = () => {
   const endOffset = itemOffset + itemsPerPage;
 
   const currentTokens:any = tokens.slice(itemOffset, endOffset)
- 
+  
 
   setCurrentItems(currentTokens);
+  // console.log("currentTokens", currentTokens)
  
   setPageCount(Math.ceil(tokens.length / itemsPerPage));
+  
 }, [itemOffset, itemsPerPage,tokens,currentItems]);
 
   const handlePageClick = (event) => {
@@ -91,7 +93,8 @@ const Token: React.FC = () => {
     setItemOffset(newOffset);
     
   }
-  
+
+
   return (
     <>
       <div className="trendingDiv_top d-none">
@@ -124,12 +127,12 @@ const Token: React.FC = () => {
                 <Table responsive="sm" style={{ fontSize: '14px', color: "#ffc600" }}>
                   <thead>
                     <tr>
-                      <th><span style={{ display: "none" }}>.</span></th>
-                      <th scope="col"># </th>
-                      <th scope="col" style={{ paddingLeft: "47px" }}>Name</th>
-                      <th scope="col">Price (USD)</th>
-                      <th className='mob-display' scope="col">Total Supply</th>
-                      <th className='mob-display' scope="col">Market Cap</th>
+                      <th style={{width: "50px" }}><span style={{visibility: "hidden" }}>.</span></th>
+                      <th scope="col" style={{width: "50px" }}># </th>
+                      <th scope="col" style={{ paddingLeft: "47px", width: "200px" }}>Name</th>
+                      <th scope="col" style={{width: "250px" }}>Price (USD)</th>
+                      <th className='mob-display' scope="col" style={{width: "200px"}}>Total Supply</th>
+                      <th className='mob-display' scope="col" style={{width: "200px"}}>Market Cap</th>
                       {/* <th scope="col">Volume(24h)</th>
                       <th scope="col">Last 7 Days</th> */}
                     </tr>
@@ -146,7 +149,7 @@ const Token: React.FC = () => {
                         return (
                           <tr key={id}>
                             <td><span style={{ display: "none" }}>.</span><FontAwesomeIcon icon={faStar} /></td>
-                            <td>{index + 1}</td>
+                            <td>{index + itemOffset + 1}</td>
                             <td className='d-flex'>
                               <img src={images[index]} alt="img" className='token_img img-fluid' />
                               <p className='name'>{name}</p>
@@ -162,15 +165,18 @@ const Token: React.FC = () => {
 
                   </tbody>
                 </Table>
-                <ReactPaginate
+               
+              </div>
+              <div className="paginate">
+              <ReactPaginate
                   breakLabel="..."
-                  nextLabel="next >>"
+                  nextLabel=" >>"
                   onPageChange={handlePageClick}
                   pageRangeDisplayed={3}
                   marginPagesDisplayed={2}
                   pageCount={pageCount}
-                  previousLabel="<< previous"
-                  containerClassName='pagination justify-content-center'
+                  previousLabel="<< "
+                  containerClassName='pagination justify-content-end'
                   pageClassName='page-item'
                   pageLinkClassName='page-link'
                   previousClassName='page-item'
@@ -182,7 +188,7 @@ const Token: React.FC = () => {
                   activeClassName='active'
                   
                 />
-              </div>
+                </div>
             </div>
           </div>
         </div>

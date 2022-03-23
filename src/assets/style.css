@@ -57,7 +57,7 @@
 }
 
 .trendingList_table .loader{
-    height: 50vh;
+    height: 45vh;
 }
 .trendingList_table .loader .spinner{
     font-size: 50px;
@@ -249,7 +249,8 @@
 /* ============================================= old Token.tsx CSS End ======================================== */
 
 .trendingList_Div{
-    margin-top: 50px;
+ 
+    margin-top: 20px;
     background: #000000;
     padding: 15px;
     border-radius: 5px;
@@ -283,6 +284,10 @@
         display: none !important;
     }
     
+}
+
+.gYPYWB{
+    padding: 20px 16px !important;
 }
 
 /* ===================================================== Theme styling ======================================================= */
@@ -321,19 +326,22 @@ button.sc-dkPtyc:nth-child(2) {
 
 
 /* ===================================================== Token Pagination styling ======================================================= */
-.trendingList_table .page-item.active .page-link {
+.trendingList_Div .page-item.active .page-link {
     z-index: 3;
     color: #fff;
     background-color: #ffc600 !important;
     border-color: #ffc600 !important;
 }
-.trendingList_table .page-link {
+.trendingList_Div .page-link {
     color: #131212 !important;
     /* font-weight: 600; */
 }
-.trendingList_table .page-link:hover {
+.trendingList_Div .page-link:hover {
     color: #131212 !important;
 }
-.trendingList_table .page-link:focus {
+.trendingList_Div .page-link:focus {
     box-shadow: 0 0 0 0.25rem rgb(250 205 48) !important;
+}
+.trendingList_table{
+    min-height: 350px;
 }
