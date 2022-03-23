@@ -56,10 +56,14 @@
     padding-left: 10px;
 }
 
+.trendingList_table .loader{
+    height: 50vh;
+}
 .trendingList_table .loader .spinner{
     font-size: 50px;
     animation: spin infinite 2s linear;
 }
+
 @keyframes spin {
     from {
       transform: rotate(0deg);
@@ -68,6 +72,7 @@
       transform: rotate(360deg);
     }
   }
+  
 .tokenDetails_left {
     margin-top: 50px;
     background: #ffffff;
@@ -312,4 +317,23 @@ nav.sc-dvQbkV {
 
 button.sc-dkPtyc:nth-child(2) {
     background-color: #ffd700 !important;
+}
+
+
+/* ===================================================== Token Pagination styling ======================================================= */
+.trendingList_table .page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #ffc600 !important;
+    border-color: #ffc600 !important;
+}
+.trendingList_table .page-link {
+    color: #131212 !important;
+    /* font-weight: 600; */
+}
+.trendingList_table .page-link:hover {
+    color: #131212 !important;
+}
+.trendingList_table .page-link:focus {
+    box-shadow: 0 0 0 0.25rem rgb(250 205 48) !important;
 }

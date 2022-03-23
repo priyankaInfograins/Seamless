@@ -288,7 +288,7 @@ export default function AddLiquidity({
 
   return (
     <>
-      <div className="trendingDiv_top">
+      <div className="trendingDiv_top d-none">
         <ul>
           <li className='token_H1'>Trending</li>
           <li><span style={{ color: '#000' }}>#1</span> demo</li>
