@@ -38,7 +38,7 @@ const Token: React.FC = () => {
   useEffect(() => {
 
 
-    setInterval(() => {
+    // setInterval(() => {
       const config = {
         headers: {
           "Content-Type": "application/json"
@@ -49,25 +49,28 @@ const Token: React.FC = () => {
       axios.get("https://anandisha.com/seamless/admin/api/getCoin", config).then(res => {
         setLoading(false)
          console.log("res data", res.data.data)
+
+         
          setPooAPI(res.data.data)
-    
+      
       }).catch(err => {
         console.log("err", err)
       })
      
-    }, 5000)
+    // }, 5000)
 
   }, [])
 
  
+  let tokens
+  
+  if(pooAPI === undefined || pooAPI === null){
+      tokens = []
+     
+  }else{
+     tokens = Object.values(pooAPI);
+  }
  
-  const tokens = Object.values(pooAPI);
- 
-  // tokens.map(e => {
-  //     return (
-  //       console.log("e", e)
-  //     )
-  //   })
   
 
   // ================================================= GET API End =====================================================
@@ -86,7 +89,7 @@ const Token: React.FC = () => {
  
   setPageCount(Math.ceil(tokens.length / itemsPerPage));
   
-}, [itemOffset, itemsPerPage,tokens,currentItems]);
+}, [itemOffset, tokens]);
 
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % tokens.length;
@@ -144,22 +147,24 @@ const Token: React.FC = () => {
                         <td colSpan={6}><FontAwesomeIcon icon={faSpinner} className="spinner" /></td>
                       </tr>
                       :
-
-                      currentItems.map(({ id, name, quote, max_supply, total_supply }: any, index) => {
-                        return (
-                          <tr key={id}>
-                            <td><span style={{ display: "none" }}>.</span><FontAwesomeIcon icon={faStar} /></td>
-                            <td>{index + itemOffset + 1}</td>
-                            <td className='d-flex'>
-                              <img src={images[index]} alt="img" className='token_img img-fluid' />
-                              <p className='name'>{name}</p>
-                            </td>
-                            <td>{quote.USD.price}</td>
-                            <td className='mob-display'>{max_supply === null ? total_supply : max_supply} </td>
-                            <td className='mob-display'>{quote.USD.fully_diluted_market_cap}</td>
-                          </tr>
-                        )
-                      })
+                     
+                          currentItems.map(({ id, name, quote, max_supply, total_supply }: any, index) => {
+                            return (
+                              <tr key={id}>
+                                <td><span style={{ display: "none" }}>.</span><FontAwesomeIcon icon={faStar} /></td>
+                                <td>{index + itemOffset + 1}</td>
+                                <td className='d-flex'>
+                                  <img src={images[index]} alt="img" className='token_img img-fluid' />
+                                  <p className='name'>{name}</p>
+                                </td>
+                                <td>{quote.USD.price}</td>
+                                <td className='mob-display'>{max_supply === null ? total_supply : max_supply} </td>
+                                <td className='mob-display'>{quote.USD.fully_diluted_market_cap}</td>
+                              </tr>
+                            )
+                          })
+                   
+                    
                     }
 
 
